@@ -1,0 +1,8 @@
+com\rectassets\backend\model\Asset.class
+com\rectassets\backend\config\DataSeeder.class
+com\rectassets\backend\controller\AssetController.class
+com\rectassets\backend\exception\ResourceNotFoundException.class
+com\rectassets\backend\RectAssetsBackendApplication.class
+com\rectassets\backend\service\AssetService.class
+com\rectassets\backend\exception\GlobalExceptionHandler.class
+com\rectassets\backend\repository\AssetRepository.class
