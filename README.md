@@ -7,7 +7,6 @@ React frontend + Java Spring Boot backend for managing **company computer / IT a
 | Part 1 | React app (menu, CRUD UI, About page) |
 | Part 2 | Spring server + integration + JUnit/Mockito tests |
 
-Public repo: https://github.com/Nfyuji/react
 
 ## Quick start
 
