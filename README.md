@@ -1,42 +1,77 @@
-# RectAssets — SE411 Project Part 1
+# RectAssets — SE411 Project (Parts 1 & 2)
 
-React frontend for managing **company computer / IT assets** (add, view, update, delete).
+React frontend + Java Spring Boot backend for managing **company computer / IT assets**.
 
-Data is stored in an in-memory collection of objects (no database). Backend comes in Part 2.
+| Part | Deliverable |
+|------|-------------|
+| Part 1 | React app (menu, CRUD UI, About page) |
+| Part 2 | Spring server + integration + JUnit/Mockito tests |
+
+Public repo: https://github.com/Nfyuji/react
 
 ## Quick start
+
+### 1) Start the Spring backend
+
+```bash
+cd backend
+./mvnw spring-boot:run
+```
+
+Windows:
+
+```bash
+cd backend
+.\mvnw.cmd spring-boot:run
+```
+
+Backend: `http://localhost:8080`
+
+### 2) Start the React frontend
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the URL shown in the terminal (usually `http://localhost:5173`).
-
-## Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Production build |
-| `npm test` | Run tests |
-| `npm run preview` | Preview production build |
+Frontend: `http://localhost:5173`
 
 ## Features
 
-- Navigation menu: **Assets**, **Add Asset**, **About**
-- CRUD for computer assets (tag, name, type, assignee, department, status, purchase date)
-- Search / filter on the assets list
-- About page for team members (name + student ID)
+- Add asset
+- Search asset by ID
+- List all assets with pagination
+- Update asset
+- Delete asset (frontend + API)
+- About page (team members)
+- Backend unit tests (JUnit + Mockito)
+
+## REST API
+
+| Method | Route | Description |
+|--------|-------|-------------|
+| POST | `/api/assets` | Create |
+| GET | `/api/assets/{id}` | Find by ID |
+| GET | `/api/assets?page=0&size=5` | Paginated list |
+| PUT | `/api/assets/{id}` | Update |
+| DELETE | `/api/assets/{id}` | Delete |
+
+## Tests
+
+```bash
+# Frontend
+npm test
+
+# Backend
+cd backend
+./mvnw test
+```
 
 ## Documentation
 
-See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for architecture, technology stack, and feature details.
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — architecture + API details
+- [docs/PRESENTATION.md](docs/PRESENTATION.md) — 2 presentation slides
 
 ## Team
 
-Update names and student IDs in `src/pages/AboutPage.jsx` before submitting.
-
-## Course
-
-SE411 — Fall 2026-27 · Deadline for Part 1: 17 October 2026
+Update names/IDs in `src/pages/AboutPage.jsx` before the demo.
